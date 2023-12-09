@@ -1215,11 +1215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Playground\\ASP.Net Web API\\TaskManagementAPI\\TaskManagementAPI\\TaskManagementAPI.csproj",
+      "projectUniqueName": "C:\\Playground\\ASP.Net Web App\\TaskManagementAPI\\TaskManagementAPI\\TaskManagementAPI.csproj",
       "projectName": "TaskManagementAPI",
-      "projectPath": "C:\\Playground\\ASP.Net Web API\\TaskManagementAPI\\TaskManagementAPI\\TaskManagementAPI.csproj",
+      "projectPath": "C:\\Playground\\ASP.Net Web App\\TaskManagementAPI\\TaskManagementAPI\\TaskManagementAPI.csproj",
       "packagesPath": "C:\\Users\\Deren\\.nuget\\packages\\",
-      "outputPath": "C:\\Playground\\ASP.Net Web API\\TaskManagementAPI\\TaskManagementAPI\\obj\\",
+      "outputPath": "C:\\Playground\\ASP.Net Web App\\TaskManagementAPI\\TaskManagementAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Deren\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,10 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 export default function Home() {
   const [quest, setQuest] = useState(null);
   const [openForm, setForm] = useState(true);
+  const questRef = useRef(null);
+  const deadlineRef = useRef(null);
 
   // Ambil data seluruhnya
   useEffect(() => {
@@ -17,16 +19,27 @@ export default function Home() {
   }, []);
 
   if (!quest) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <main
+          className="w-full h-screen flex justify-center items-center bg-cover bg-repeat"
+          style={{ backgroundImage: `url(./bg.png)` }}
+        >
+          <h1 className="font-extrabold text-[80px] text-blue-950">
+            LOADING....
+          </h1>
+        </main>
+      </>
+    );
   }
 
   // Post
   const postData = async () => {
     axios
       .post("https://localhost:7098/api/Quest", {
-        tugas: "Makan cirambay",
+        tugas: questRef.current.value,
         isDone: false,
-        deadline: "2021-10-10",
+        deadline: deadlineRef.current.value,
       })
       .then((result) => {
         console.log(result);
@@ -89,6 +102,7 @@ export default function Home() {
                   type="text"
                   placeholder="Enter Quest"
                   id="quest"
+                  ref={questRef}
                 />
               </div>
               <div className="flex flex-col">
@@ -99,6 +113,7 @@ export default function Home() {
                   className="text-black font-semibold"
                   type="datetime-local"
                   id="deadline"
+                  ref={deadlineRef}
                 />
               </div>
               <div className="flex flex-row">
